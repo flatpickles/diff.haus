@@ -33,6 +33,8 @@
 	<title>[diff.haus] {data.uuid}</title>
 </svelte:head>
 
-<h1>DIFF HAUS</h1>
+<div class="m-8">
+	<h1 class="text-7xl font-bold text-center mb-2">DIFF.HAUS</h1>
 
-<div id="diff-ui" bind:this={diffContainer}></div>
+	<div id="diff-ui" bind:this={diffContainer}></div>
+</div>

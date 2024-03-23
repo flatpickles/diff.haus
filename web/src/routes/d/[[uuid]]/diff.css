@@ -1,9 +1,13 @@
-body {
-	font-family: 'IBM Plex Sans', sans;
+.d2h-file-list-header {
+	font-family: 'IBM Plex Sans', monospace;
+}
+
+.d2h-file-list-line {
+	font-family: 'IBM Plex Mono', monospace;
 }
 
 .d2h-file-header {
-	font-family: 'IBM Plex Sans', monospace;
+	font-family: 'IBM Plex Mono', monospace;
 }
 
 .d2h-diff-table {
