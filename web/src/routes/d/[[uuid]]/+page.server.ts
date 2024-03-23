@@ -1,6 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import { html } from 'diff2html';
 
 export const load: PageServerLoad = async ({ params }) => {
 	// Go home if no uuid is supplied
@@ -8,12 +7,9 @@ export const load: PageServerLoad = async ({ params }) => {
 		return redirect(303, '/');
 	}
 
-	// Parse the diff (demo for now)
-	const diffHtml = html(demoDiff);
-
 	// Return demo data for now
 	return {
-		diffHtml
+		diff: demoDiff
 	};
 };
 
