@@ -9,7 +9,8 @@ export const load: PageServerLoad = async ({ params }) => {
 
 	// Return demo data for now
 	return {
-		diff: demoDiff
+		diff: demoDiff,
+		uuid: params.uuid
 	};
 };
 

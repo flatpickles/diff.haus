@@ -5,6 +5,7 @@
 
 	import 'highlight.js/styles/github.css';
 	import 'diff2html/bundles/css/diff2html.min.css';
+	import './diff.css';
 
 	let diffContainer: HTMLDivElement;
 	export let data: PageData;
@@ -27,5 +28,11 @@
 		diff2htmlUi.highlightCode();
 	});
 </script>
+
+<svelte:head>
+	<title>[diff.haus] {data.uuid}</title>
+</svelte:head>
+
+<h1>DIFF HAUS</h1>
 
 <div id="diff-ui" bind:this={diffContainer}></div>
