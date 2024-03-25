@@ -34,7 +34,10 @@
 </svelte:head>
 
 <div class="m-8">
-	<h1 class="text-7xl font-bold text-center mb-2">DIFF.HAUS</h1>
+	<header class="flex flex-col w-full items-center">
+		<h1 class="text-7xl font-bold mb-2">DIFF.HAUS</h1>
+		<h2>{data.uuid}</h2>
+	</header>
 
 	<div id="diff-ui" bind:this={diffContainer}></div>
 </div>

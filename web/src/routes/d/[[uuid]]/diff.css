@@ -12,4 +12,17 @@
 
 .d2h-diff-table {
 	font-family: 'IBM Plex Mono', monospace;
+	border-collapse: collapse;
+}
+
+/* hax: full-height left/right borders */
+.d2h-code-side-linenumber,
+.d2h-code-linenumber {
+	height: 1.43rem;
+}
+
+/* remove left border from left-side line numbers */
+.d2h-file-side-diff:nth-of-type(1) .d2h-code-side-linenumber,
+.d2h-code-linenumber {
+	border-left: none;
 }
