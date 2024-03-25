@@ -15,6 +15,21 @@
 	border-collapse: collapse;
 }
 
+.d2h-file-list-wrapper {
+	background-color: #f8f8f8;
+	border: 1px solid var(--d2h-border-color);
+	border-radius: 3px;
+}
+
+.d2h-file-list-header {
+	padding: 10px;
+	padding-bottom: 0;
+}
+
+.d2h-file-list-line {
+	padding: 0 10px;
+}
+
 /* hax: full-height left/right borders */
 .d2h-code-side-linenumber,
 .d2h-code-linenumber {
