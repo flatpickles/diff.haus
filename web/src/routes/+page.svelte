@@ -9,7 +9,7 @@
 
 		<code class="bg-black text-white p-2 rounded-sm">
 			git diff | curl -X POST -H "Content-Type: text/plain" --data-binary @-
-			http://diff.haus/api/diffs
+			https://diff.haus/api/diffs
 		</code>
 	</div>
 </div>

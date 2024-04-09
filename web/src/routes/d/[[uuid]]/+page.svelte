@@ -45,7 +45,9 @@
 
 <div class="m-8">
 	<header class="flex flex-col w-full items-center mb-8">
-		<h1 class="text-7xl font-bold mb-2">DIFF.HAUS</h1>
+		<a href="/">
+			<h1 class="text-7xl font-bold mb-2">DIFF.HAUS</h1>
+		</a>
 		<h2><a href={`/d/${data.uuid}`}>{data.uuid}</a></h2>
 		<div class="flex flex-row gap-2">
 			<button on:click={() => renderDiff(true)} class:underline={sideBySideRender}>
