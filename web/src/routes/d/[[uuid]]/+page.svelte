@@ -10,7 +10,7 @@
 	export let data: PageData;
 	let diffContainer: HTMLDivElement;
 	let diffRendered = false;
-	let sideBySideRender = true;
+	let sideBySideRender = true; // todo: persist, and default false on mobile
 
 	onMount(() => {
 		renderDiff();
@@ -43,12 +43,12 @@
 	<title>[diff.haus] {data.uuid}</title>
 </svelte:head>
 
-<div class="m-8">
+<div id="page-contents" class="m-8" class:rendered={diffRendered}>
 	<header class="flex flex-col w-full items-center mb-8">
 		<a href="/">
-			<h1 class="text-7xl font-bold mb-2">DIFF.HAUS</h1>
+			<h1 class="text-7xl font-bold mb-2 font-display">diff.haus</h1>
 		</a>
-		<h2><a href={`/d/${data.uuid}`}>{data.uuid}</a></h2>
+		<a href={`/d/${data.uuid}`}>{data.uuid}</a>
 		<div class="flex flex-row gap-2">
 			<button on:click={() => renderDiff(true)} class:underline={sideBySideRender}>
 				Side by Side
@@ -59,16 +59,16 @@
 		</div>
 	</header>
 
-	<div id="diff-ui" bind:this={diffContainer} class:rendered={diffRendered}></div>
+	<div bind:this={diffContainer} />
 </div>
 
 <style>
-	#diff-ui {
+	#page-contents {
 		opacity: 0;
-		transition: opacity 0.25s;
+		transition: opacity 0.5s;
 	}
 
-	#diff-ui.rendered {
+	#page-contents.rendered {
 		opacity: 1;
 	}
 </style>
